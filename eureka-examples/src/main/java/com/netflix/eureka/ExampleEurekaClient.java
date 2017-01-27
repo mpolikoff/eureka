@@ -85,6 +85,7 @@ public class ExampleEurekaClient {
 
         Socket s = new Socket();
         int serverPort = nextServerInfo.getPort();
+		System.out.println(String.format("Trying %s:%s", nextServerInfo.getHostName(), serverPort));
         try {
             s.connect(new InetSocketAddress(nextServerInfo.getHostName(), serverPort));
         } catch (IOException e) {
